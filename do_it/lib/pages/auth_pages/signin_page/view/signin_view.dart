@@ -32,7 +32,7 @@ class SignInPage extends StatelessWidget {
                         width: 21*fem,
                         height: 21*fem,
                         child: Image.asset(
-                          'assets/images/group-7377-p9M.png',
+                          'assets/images/group-7377.png',
                           width: 21*fem,
                           height: 21*fem,
                         ),
@@ -66,9 +66,11 @@ class SignInPage extends StatelessWidget {
                 ),
                 Container(
                   // welcomebackV4B (0:86)
+                  alignment: Alignment.center,
                   margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 11.5*fem, 36*fem),
                   child: Text(
                     'Welcome Back !',
+                    textAlign: TextAlign.center,
                     style: SafeGoogleFont (
                       'Mark Pro',
                       fontSize: 24*ffem,
@@ -118,14 +120,7 @@ class SignInPage extends StatelessWidget {
                   child: Text(
                     'Forgot Password?',
                     textAlign: TextAlign.center,
-                    style: SafeGoogleFont (
-                      'Mark Pro',
-                      fontSize: 12*ffem,
-                      fontWeight: FontWeight.w400,
-                      height: 1.6666666667*ffem/fem,
-                      letterSpacing: -0.2399999946*fem,
-                      color: Color(0xff818181),
-                    ),
+                    style: AppStyle.footertext
                   ),
                 ),
                 Row(
