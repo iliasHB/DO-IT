@@ -1,3 +1,5 @@
+import 'package:do_it/pages/dashboard/widgets/add_task_view.dart';
+import 'package:do_it/pages/dashboard/widgets/create_project.dart';
 import 'package:do_it/theme/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
@@ -12,6 +14,7 @@ class ProjectPage extends StatelessWidget {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
+      //floatingActionButton: FloatingActionButton(onPressed: () => Navigator.pushNamed(context, '/create_project')),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -24,22 +27,25 @@ class ProjectPage extends StatelessWidget {
                 children: [
                   BackArrowButton(context),
                   Align(
-                    child: Container(
-                      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                      // width: 61 * fem,
-                      // height: 28 * fem,
-                      decoration: BoxDecoration(
-                        border: Border.all(width: 1, color: Color(0xff217ac0),),
-                      ),
-                      child: Text(
-                        'Create Project',
-                        style: SafeGoogleFont(
-                          'Mark Pro',
-                          // fontSize: 15 * ffem,
-                          fontWeight: FontWeight.w400,
-                          // height: 3.1111111111 * ffem / fem,
-                          // letterSpacing: -0.2399999946 * fem,
-                          color: Color(0xff217ac0),
+                    child: InkWell(
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => CreateProjectPage())),
+                      child: Container(
+                        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                        // width: 61 * fem,
+                        // height: 28 * fem,
+                        decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: Color(0xff217ac0),),
+                        ),
+                        child: Text(
+                          'Create Project',
+                          style: SafeGoogleFont(
+                            'Mark Pro',
+                            // fontSize: 15 * ffem,
+                            fontWeight: FontWeight.w400,
+                            // height: 3.1111111111 * ffem / fem,
+                            // letterSpacing: -0.2399999946 * fem,
+                            color: Color(0xff217ac0),
+                          ),
                         ),
                       ),
                     ),
@@ -294,23 +300,26 @@ class ProjectPage extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Positioned(
-                                      // addtask6CP (501:372)
-                                      left: 11 * fem,
-                                      top: 0 * fem,
-                                      child: Align(
-                                        child: SizedBox(
-                                          width: 43 * fem,
-                                          height: 28 * fem,
-                                          child: Text(
-                                            'Add Task',
-                                            style: SafeGoogleFont(
-                                              'Mark Pro',
-                                              fontSize: 10 * ffem,
-                                              fontWeight: FontWeight.w400,
-                                              height: 2.8 * ffem / fem,
-                                              letterSpacing: -0.2399999946 * fem,
-                                              color: Color(0xff217ac0),
+                                    InkWell(
+                                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => AddTaskPage())),
+                                      child: Positioned(
+                                        // addtask6CP (501:372)
+                                        left: 11 * fem,
+                                        top: 0 * fem,
+                                        child: Align(
+                                          child: SizedBox(
+                                            width: 43 * fem,
+                                            height: 28 * fem,
+                                            child: Text(
+                                              'Add Task',
+                                              style: SafeGoogleFont(
+                                                'Mark Pro',
+                                                fontSize: 10 * ffem,
+                                                fontWeight: FontWeight.w400,
+                                                height: 2.8 * ffem / fem,
+                                                letterSpacing: -0.2399999946 * fem,
+                                                color: Color(0xff217ac0),
+                                              ),
                                             ),
                                           ),
                                         ),

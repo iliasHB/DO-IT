@@ -4,7 +4,7 @@ import 'package:flutter/gestures.dart';
 
 import '../../../constants/utils/app_export.dart';
 
-class Scene extends StatelessWidget {
+class EditTaskPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 375;
