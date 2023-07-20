@@ -8,12 +8,14 @@ import 'package:do_it/pages/dashboard/widgets/create_project.dart';
 import 'package:do_it/pages/initial_page/view/initial_view.dart';
 import 'package:flutter/material.dart';
 
+///routes
 final AppRoutes = {
   '/': (BuildContext context) => Initialpage(),
   '/create_account': (BuildContext context) => CreateAccountPage(),
   '/signin': (BuildContext context) => SignInPage(),
-  '/dashboard': (BuildContext context) => DashboardPage(),
-  'create_project': (BuildContext context) => CreateProjectPage(),
-  'project': (BuildContext context) => ProjectPage(),
-  'add_task': (BuildContext context) => AddTaskPage()
+  '/dashboard': (BuildContext context) => DashboardBottomNav(),
+  '/create_project': (BuildContext context) => CreateProjectPage(),
+  '/project': (BuildContext context) => ProjectPage(),
+  '/add_task': (BuildContext context) => AddTaskPage(),
+
 };
