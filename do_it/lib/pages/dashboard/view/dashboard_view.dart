@@ -92,20 +92,17 @@ class DashboardSubPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> ProjectPage()));
-                        //Navigator.pushNamed(context, '/project');
-                      },
-                      child: Container(
-                        // autogroupatbvYHu (6eVyurcdVDp2GKj6pzATBV)
-                        margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 12.5*fem, 20*fem),
-                        width: double.infinity,
-                        height: 128*fem,
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Container(
+                    Container(
+                      // autogroupatbvYHu (6eVyurcdVDp2GKj6pzATBV)
+                      margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 12.5*fem, 20*fem),
+                      width: double.infinity,
+                      height: 128*fem,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          InkWell(
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => ProjectPage())),
+                            child: Container(
                               // group95814n3 (501:697)
                               margin: EdgeInsets.fromLTRB(0*fem, 0*fem, 20*fem, 0*fem),
                               padding: EdgeInsets.fromLTRB(16*fem, 16*fem, 20*fem, 12*fem),
@@ -165,7 +162,10 @@ class DashboardSubPage extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            Container(
+                          ),
+                          InkWell(
+                            //onTap:() => Navigator.push(context, MaterialPageRoute(builder: (_) => Task))
+                            child: Container( 
                               // group9582b3D (501:698)
                               padding: EdgeInsets.fromLTRB(16*fem, 16*fem, 16*fem, 12*fem),
                               width: 153*fem,
@@ -224,8 +224,8 @@ class DashboardSubPage extends StatelessWidget {
                                 ],
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                     Container(
